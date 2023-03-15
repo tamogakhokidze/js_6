@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  color: black;
+}
+
+
+.navbar {
+  background-color: lightblue;
+  padding: 30px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  
+}
+
+.burger-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+  /* border: 2px solid black; */
+  display: none;
+}
+.line {
+  width: 80%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+
+.line1 {
+  top: 30%;
+}
+
+.line3 {
+  top: 70%;
+}
+
+.activeBurgerbar .line1 {
+  top: 50%;
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.activeBurgerbar .line2 {
+  display: none;
+}
+
+.activeBurgerbar .line3 {
+  background-color: red;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.nav-ul.toggleulNavigation {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* background-color: aquamarine; */
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s;
+  font-size: 30px;
+ 
+}
+
+
+@media (max-width: 480px) {
+  .nav-ul {
+    display: none;
+    /* flex-direction: column;
+        align-items: center;
+        font-size: 30px; */
+  }
+  .burger-bar {
+    display: block;
+  }
+   .navbar {
+        flex-direction: column;
+    }
+ /* li {
+        flex-direction: column;
+        align-items: center;
+    }  */
+
+    .nav-ul.toggleulNavigation {
+    background-image: url("../image/ocean.gif");
+    background-size: cover;
+  }
+}
