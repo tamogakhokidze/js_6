@@ -129,10 +129,11 @@ span{
 
    .clearall{
     background-color: lightcoral;
+    padding: 2px;
 
    
    }
-   .ul-item{
+   .ul-item.li{
     text-decoration:dotted;
     color: black;
    
@@ -145,5 +146,5 @@ margin: 20px auto;
 
    .btn-add{
    background-color: lightgreen;
-    
+   padding: 2px;
    }
