@@ -1,38 +1,35 @@
 "use strict";
 
-//task 2
-
-
-// დავალება 2:
-// დაამატეთ ბურგერის ლოგიკა. ბურგერი უნდა ააწყოთ ან დივებით ან სპანებით. დაჭერის დროს უნდა გამოხნდეს x ვიზუალი და ლამაზად გამოჩნდეს დამალული სანავიგაციო სტრუქტურა. მაგ: https://camex.ge https://www.galleria.ge 
-
-
-
-// დავალება 3:
-// ააწყეთ ინფუთის მაგილითი, როგორც ვივარჯიშეთ ლექციაზე,
-// რასაც ჩავწერ ინფუთში და ღილაკის ან ენთერის დაჭერის შემთვევაში
-// ეს მნიშნელობა უნდა ჩავარდეს li-ში, ხოლო ინფუთი უნდა გასუფთავდეს;
-//  ლი-ში ჩვენ დავამატეთ წაშლის ღილაკი, ხოლო
-//  თქვენ გაალამაზეთ და ღლაკის მაგივრად დაამატეთ აიქონი
-//  fontawesome-იდან,
-//  რომლის დაჭერის შემთხვევაში წაიშლება მთლიანი ლისტი;
-
-let formElement = document.querySelector(".submitionform");
-let inputElement = document.querySelector(".info");
-let buttonElement = document.querySelector(".addbutton");
-let ulelement = document.querySelector(".clearall");
+let formElement = document.querySelector(".form-block");
+let inputField = document.querySelector(".input");
+let button = document.querySelector(".btn-add");
+let ulItem = document.querySelector(".ul-item");
 
 formElement.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  let inputValueElement = inputElement.value;
+  let inputValueitem = inputField.value;
 
-  if (inputValueElement == " ") {
+  if (inputValueitem == " ") {
     return;
   }
 
   let li = document.createElement("li");
-  li.textContent = inputValueElement;
+  li.textContent = inputValueitem;
 
-  let 
+  let span = document.createElement("span");
+  span.innerHTML = '<i class ="fa-solid fa-xmark"></i>';
+  span.addEventListener("click", function () {
+    li.remove();
+  });
+
+  li.appendChild(span);
+  ulItem.appendChild(li);
+
+  inputField.value = " ";
+});
+
+document.querySelector(".clearall").addEventListener("click", function () {
+  ulItem.innerHTML = " ";
+
 });

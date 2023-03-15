@@ -5,6 +5,9 @@
   text-decoration: none;
   list-style-type: none;
 }
+
+
+/* --------------burger bar------------------ */
 a {
   color: black;
 }
@@ -111,3 +114,36 @@ a {
     background-size: cover;
   }
 }
+
+
+
+
+/* -------form submition----------- */
+
+
+span{
+    color: red;
+    padding: 5px;
+   }
+
+
+   .clearall{
+    background-color: lightcoral;
+
+   
+   }
+   .ul-item{
+    text-decoration:dotted;
+    color: black;
+   
+   }
+   .formsubmition{
+    width: 400px;
+height: auto;
+margin: 20px auto;
+   }
+
+   .btn-add{
+   background-color: lightgreen;
+    
+   }
